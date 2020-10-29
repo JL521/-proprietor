@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/root/root",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/min/min",
+    "pages/home/toupiao/vote",
+    "pages/home/lzwy/lxwy",
+    "pages/lostandfond/lostList",
+    "pages/lostandfond/puslish/publish",
+    "pages/home/publishvote/publishvote"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "中央公馆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FFA500",
+    "list": [
+      {
+        "pagePath": "pages/root/root",
+        "text": "首页",
+        "iconPath": "images/tab/home_unse.png",
+        "selectedIconPath": "images/tab/home.png"
+      },
+      {
+        "pagePath": "pages/min/min",
+        "text": "我的",
+        "iconPath": "images/tab/userprofile_unse.png",
+        "selectedIconPath": "images/tab/userprofile.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

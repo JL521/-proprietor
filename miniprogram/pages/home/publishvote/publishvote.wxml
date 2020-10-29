@@ -1,0 +1,8 @@
+<!--miniprogram/pages/home/publishvote/publishvote.wxml-->
+<view class="container">
+
+  <scroll-view>
+    发起投票
+  </scroll-view>
+
+</view>

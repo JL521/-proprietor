@@ -1,0 +1,25 @@
+<!--miniprogram/pages/home/home.wxml-->
+
+<view class="container"> 
+
+ <view class="item-row">
+   <navigator class="btn">家装维修</navigator>
+   <navigator url="../home/toupiao/vote" class="btn">发起投票</navigator>
+ </view>
+
+ <view class="item-row">
+   <navigator class="btn">问答</navigator>
+   <navigator class="btn">失物招领</navigator>
+ </view>
+
+ <view class="item-row">
+   <navigator class="btn">物业通知</navigator>
+   <navigator url="../home/lzwy/lxwy" class="btn">联系物业</navigator>
+ </view>
+
+ <view class="item-row">
+   <button bindtap="push" class="btn">物业通知</button>
+ </view>
+
+</view>
+

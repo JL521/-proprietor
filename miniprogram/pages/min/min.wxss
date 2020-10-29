@@ -1,0 +1,47 @@
+/* miniprogram/pages/min/min.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  padding-top: 20px;
+  width: 100%;
+}
+
+.headimg{
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+  border-width: 1px;
+  background-color: cornflowerblue;
+
+}
+
+.list{
+  width: 100%;
+  margin: 20px;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: white;
+  /* border-bottom: 1px;
+  border-bottom-color: gray;
+  border-bottom-style: solid; */
+}
+.jiantou{
+  width: 20px;
+  height: 20px;
+}

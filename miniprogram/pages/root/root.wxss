@@ -1,0 +1,46 @@
+/* miniprogram/pages/root/root.wxss */
+page{
+  background-color:rgb(240, 240, 240);
+}
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+.img{
+  height: 150px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  
+}
+
+.fuwu{
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.fuwu-row{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.fuwu-item{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10pt;
+  background-color: white;
+}
+.fuwu-item-img{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.fuwu-title{
+  font-size: 12pt;
+}

@@ -1,0 +1,45 @@
+/* miniprogram/pages/home/lzwy/lxwy.wxss */
+page {
+  background: #f6f6f6;
+  width: auto;
+  padding: 10px;
+  /* background-color:white; */
+}
+
+.container{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.lxfs{
+margin-bottom: 10px;
+width: 100%;
+border-radius: 10px;
+background-color: white;
+padding: 10px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.text{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  }
+
+.name{
+  font-size: 10pt;
+}
+
+.img{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.phone{
+  margin-top: 5px;
+  font-size: 10pt;
+}

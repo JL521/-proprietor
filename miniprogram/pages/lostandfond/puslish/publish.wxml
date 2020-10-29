@@ -1,0 +1,33 @@
+<view class="container">
+
+  <scroll-view class="sc">
+    <view class="title">
+      <input bindinput="inputedit" data-name="title" value="{{title}}" placeholder="请输入失物招领标题"/>
+    </view>
+    <view class="author">
+      <input bindinput="inputedit" data-name="name" value="{{name}}" placeholder="请输入姓名"/>
+      <!-- <picker 
+    mode="multiSelector" 
+    bindchange="bindCustomPickerChange"   
+    bindcolumnchange="bindCustomPickerColumnChange" 
+    value="{{customIndex}}" 
+    range="{{onlyArray}}"
+    >
+      <label class="dyh">
+        选择单元号:{{onlyArray[0][customIndex[0]]}}-{{onlyArray[1][customIndex[1]]}}-{{onlyArray[2][customIndex[2]]}}{{onlyArray[3][customIndex[3]]}}
+      </label>
+</picker> -->
+    </view>
+    <view class="phone">
+      <input bindinput="inputedit" data-name="phone" type="number" value="{{phone}}" placeholder="请输入联系电话"/>
+    </view>
+    <view class="content">
+      <textarea bindinput="inputedit" data-name="content" value="{{content}}" placeholder="失物招领详细描述"/>
+    </view>
+    <view>
+      <image bindtap="uploadimg" class="upload-img" src="{{imgUrl}}"></image>
+    </view>
+  </scroll-view>
+  <button type="custom" class="pubbtn" bindtap="publish">发布</button>
+
+</view>

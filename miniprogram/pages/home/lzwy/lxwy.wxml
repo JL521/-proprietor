@@ -1,0 +1,29 @@
+<!--miniprogram/pages/home/lzwy/lxwy.wxml-->
+
+<view class=" container">
+
+  <view bindtap="call" data-phone="7720112" class="lxfs">
+    <image class="img" src="../../../images/1.jpg"></image>
+    <view class="text">
+    <label class="name">中央公馆物业 (办公室)</label>
+    <label class="phone">(0534) 7720112</label>
+  </view>
+  </view>
+
+  <view bindtap="call" data-phone="16688087736" class="lxfs">
+    <image class="img" src="../../../images/1.jpg"></image>
+    <view class="text">
+      <label class="name">中央公馆物业 (客服)</label>
+      <label class="phone">166 8808 7736</label>
+    </view>
+  </view>
+
+  <view bindtap="call" data-phone="17515130187"  class="lxfs">
+    <image class="img" src="../../../images/1.jpg"></image>
+    <view class="text">
+    <label class="name">中央公馆物业 (客服)</label>
+    <label class="phone">175 1513 0187</label>
+  </view>
+  </view>
+
+</view>

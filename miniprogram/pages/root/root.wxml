@@ -1,0 +1,67 @@
+<!--miniprogram/pages/root/root.wxml-->
+<view class="container">
+  <scroll-view>
+    <view class="img">
+<swiper indicator-active-color="#ffffff" indicator-dots="true" autoplay="true" duration="300">
+<swiper-item wx:for="{{bannerlist}}">
+  <image class="swiper-img" style="height: 150px;width:100%" src="{{item.imgurl}}"></image>
+</swiper-item>
+</swiper>
+</view>
+
+<view class="body">
+  <view class="fuwu">
+    <label class="fuwu-title">社区服务</label>
+    <view class="fuwu-row">
+      <view class="fuwu-item">
+      <image mode="aspectFill" class="fuwu-item-img" src="../../images/fix.jpg"></image>
+      <label>故障报修</label>
+    </view>
+    <navigator url="../home/toupiao/vote" class="fuwu-item">
+      <image mode="aspectFill" class="fuwu-item-img" src="../../images/vote.jpg"></image>
+      <label>业主投票</label>
+    </navigator>
+    <navigator url="../lostandfond/lostList" class="fuwu-item">
+      <image class="fuwu-item-img" src="../../images/lostandfond.jpg"></image>
+      <label>失物招领</label>
+    </navigator>
+    <view class="fuwu-item">
+      <image mode="aspectFill" class="fuwu-item-img" src="../../images/notice.jpg"></image>
+      <label>通知公告</label>
+    </view>
+    </view>
+    <view class="fuwu-row">
+    <navigator url="../home/lzwy/lxwy" class="fuwu-item">
+      <image mode="aspectFill" class="fuwu-item-img" src="../../images/connectwy.jpg"></image>
+      <label>联系物业</label>
+    </navigator>
+    </view>
+   
+  </view>
+
+  <view class="fuwu">
+    <label class="fuwu-title">便民服务</label>
+    <view class="fuwu-row">
+      <view class="fuwu-item">
+      <image class="fuwu-item-img" src="../../images/jaizhneg.jpg"></image>
+      <label>家政服务</label>
+    </view>
+    <view class="fuwu-item">
+      <image class="fuwu-item-img" src="../../images/lajiback.jpg"></image>
+      <label>垃圾回收</label>
+    </view>
+    <view class="fuwu-item">
+      <image class="fuwu-item-img" src="../../images/koubeisj.jpg"></image>
+      <label>口碑商家</label>
+    </view>
+    <view class="fuwu-item">
+      <image class="fuwu-item-img" src="../../images/shixnsj.jpg"></image>
+      <label>失信商家</label>
+    </view>
+    </view>
+   
+  </view>
+
+</view>
+  </scroll-view>
+</view>

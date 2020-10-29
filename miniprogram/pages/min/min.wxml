@@ -1,0 +1,24 @@
+<!--miniprogram/pages/min/min.wxml-->
+
+<view class="container"> 
+
+  <!-- <view> -->
+    <button open-type="getUserInfo" bindgetuserinfo="getuser">
+      <image class="headimg" src="{{userInfo.avatarUrl}}"></image>
+    </button>
+    <label class="nickname">{{userInfo.nickName}}</label>
+  <!-- </view> -->
+    
+  <view class="list">
+    <view class="item">
+      <label bindtap="push">我发布的信息</label>
+      <image class="jiantou" src="../../images/jiantou.png"></image>
+    </view>
+    <view class="item">
+      <label>联系客服</label>
+      <image class="jiantou" src="../../images/jiantou.png"></image>
+    </view>
+    
+  </view>
+
+</view>
