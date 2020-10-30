@@ -1,0 +1,62 @@
+/* miniprogram/pages/notice/notice.wxss */
+/* miniprogram/pages/lostandfond/lostList.wxss */
+page{
+  background-color:rgb(240, 240, 240);
+  width: auto;
+  padding: 10px;
+}
+
+.lost-item{
+  margin-bottom: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.lost-title{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 12pt;
+}
+
+.lost-content{
+  font-size: 10pt;
+  margin-bottom: 5px;
+  color: rgb(223, 162, 82);
+}
+
+.lost-author{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lost-msg{
+  font-size: 10pt;
+  margin-bottom: 5px;
+}
+
+.lost-img{
+  margin-top: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+.pubbtn{
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 25px;
+  background-color: green;
+  color: white;
+  font-size: 8pt;
+}

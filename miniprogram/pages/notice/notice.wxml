@@ -1,0 +1,20 @@
+<!--miniprogram/pages/notice/notice.wxml-->
+<view class="container">
+
+<scroll-view>
+<view class="lost-item" wx:for="{{noticelist}}">
+<label class="lost-title">{{item.title}}</label>
+<view class="lost-author">
+<label class="lost-content">发布人：{{item.name}}</label>
+<label class="lost-content">发布时间：{{item.time}}</label>
+</view>
+<label class="lost-msg">{{item.content}}</label>
+<image wx:if="{{item.imgurl.length!=0}}" class="lost-img" src="{{item.imgurl}}"></image>
+</view>
+</scroll-view>
+
+<navigator url="./publishnotice">
+  <button class="pubbtn">发布</button>
+</navigator>
+
+</view>

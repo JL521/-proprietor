@@ -3,25 +3,25 @@
 <view class="container">
 
   <scroll-view>
-    <view bindtap="votedetail" class="item" wx:for="{{votelist}}">
-    <label class="votetitle">投票标题投票标题</label>
+    <view data-item="{{item}}" bindtap="votedetail" class="item" wx:for="{{votelist}}">
+    <label class="votetitle">{{item.title}}</label>
     <view class="coment">
       <view class="coment-item">
         <label class="coment-text">赞成</label>
         <image class="jiantou" src="../../../images/zan.png"></image>
-        <label class="coment-text">10</label>
+        <label class="coment-text">{{item.agreecount}}</label>
       </view>
       <view class="coment-item">
         <label class="coment-text">反对</label>
         <image class="jiantou" src="../../../images/cai.png"></image>
-        <label class="coment-text">10</label>
+        <label class="coment-text">{{item.disagreecount}}</label>
       </view>
     </view>
   </view>
   </scroll-view>
   
   <navigator url="../publishvote/publishvote">
-  <button class="pubbtn">发布</button>
+  <button class="pubbtn">发起</button>
   </navigator>
 
 </view>

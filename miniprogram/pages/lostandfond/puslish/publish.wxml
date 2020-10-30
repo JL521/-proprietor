@@ -22,7 +22,7 @@
       <input bindinput="inputedit" data-name="phone" type="number" value="{{phone}}" placeholder="请输入联系电话"/>
     </view>
     <view class="content">
-      <textarea bindinput="inputedit" data-name="content" value="{{content}}" placeholder="失物招领详细描述"/>
+      <textarea class="textcontent" bindinput="inputedit" data-name="content" value="{{content}}" placeholder="失物招领详细描述"/>
     </view>
     <view>
       <image bindtap="uploadimg" class="upload-img" src="{{imgUrl}}"></image>

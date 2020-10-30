@@ -25,7 +25,7 @@
       <image class="fuwu-item-img" src="../../images/lostandfond.jpg"></image>
       <label>失物招领</label>
     </navigator>
-    <view class="fuwu-item">
+    <view bindtap="notice" class="fuwu-item">
       <image mode="aspectFill" class="fuwu-item-img" src="../../images/notice.jpg"></image>
       <label>通知公告</label>
     </view>

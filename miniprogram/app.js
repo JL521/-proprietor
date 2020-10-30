@@ -1,5 +1,6 @@
 //app.js
-const app = App({
+
+App({
   onLaunch: function () {
     var that = this;
     if (!wx.cloud) {
@@ -16,8 +17,11 @@ const app = App({
 
       wx.cloud.callFunction({
         name:"login",
-        data:{},
+        data:{
+          action:'login'
+        },
         success:res => {
+          console.log(res);
           that.globalData.openid = res.result.openid;
         }
       });

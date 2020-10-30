@@ -1,0 +1,19 @@
+<view class="container">
+
+<scroll-view class="sc">
+  <view class="title">
+    <input bindinput="inputedit" data-name="title" value="{{title}}" placeholder="请输入通知标题"/>
+  </view>
+  <view class="author">
+    <input bindinput="inputedit" data-name="name" value="{{name}}" placeholder="请输入发布者姓名"/>
+  </view>
+  <view class="content">
+    <textarea class="textcontent" bindinput="inputedit" data-name="content" value="{{content}}" placeholder="请输入通知内容"/>
+  </view>
+  <view>
+    <image bindtap="uploadimg" class="upload-img" src="{{imgUrl}}"></image>
+  </view>
+</scroll-view>
+<button type="custom" class="pubbtn" bindtap="publish">发布</button>
+
+</view>

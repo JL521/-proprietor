@@ -8,7 +8,6 @@ cloud.init({
 const db = cloud.database({
   env: cloud.DYNAMIC_CURRENT_ENV
 })
-
 // 云函数入口函数
 exports.main = async (event, context) => {
   
@@ -17,12 +16,11 @@ exports.main = async (event, context) => {
   try {
     
     if(action=='publish'){
-      return await db.collection('lostAndfond').add({
+      return await db.collection('notice').add({
         data: {
           title :event.title,
           name : event.name,
           time:event.time,
-          phone:event.phone,
           uid:event.uid,
           content:event.content,
           imgurl:event.imgurl,
@@ -30,7 +28,7 @@ exports.main = async (event, context) => {
         }
       });
     }else if(action=='queryAll'){
-      return await db.collection('lostAndfond').get({
+      return await db.collection('notice').get({
         success: function (res) {
           return res
         }

@@ -8,7 +8,10 @@
     "pages/home/lzwy/lxwy",
     "pages/lostandfond/lostList",
     "pages/lostandfond/puslish/publish",
-    "pages/home/publishvote/publishvote"
+    "pages/home/publishvote/publishvote",
+    "pages/home/votedetail/votedetail",
+    "pages/notice/notice",
+    "pages/notice/publishnotice"
   ],
   "window": {
     "backgroundColor": "#ffffff",

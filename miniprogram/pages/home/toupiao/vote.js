@@ -6,18 +6,15 @@ Page({
    */
   data: {
 
-    votelist:[1,2,3,4,5,6],
-
+    votelist:[],
   },
 
-  votedetail: function(){
+  votedetail: function(e){
 
+    let data = JSON.stringify(e.currentTarget.dataset.item)
     wx.navigateTo({
-      url: '../../index/index',
+      url: '../votedetail/votedetail?vote='+data,
     })
-
-    
-
   },
 
   /**
@@ -38,6 +35,28 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.querylist();
+  },
+
+  querylist: function(){
+
+    let that = this;
+    wx.cloud.callFunction({
+      name:'vote',
+      data:{
+        action:'queryAll',
+      },
+      success: res => {
+        console.log(res.result);
+        that.setData({
+          votelist:res.result.data
+        })
+        
+      },
+      fail: res=>{
+        console.log(res);
+      }
+    })
 
   },
 

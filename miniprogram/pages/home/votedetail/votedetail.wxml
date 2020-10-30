@@ -1,0 +1,51 @@
+
+<view class="container">
+<scroll-view class="container">
+  <label class="notice">投票前请先选择您的单元号</label>
+  <view class="section">
+      <picker 
+    mode="multiSelector" 
+    bindchange="bindCustomPickerChange"   
+    bindcolumnchange="bindCustomPickerColumnChange" 
+    value="{{customIndex}}" 
+    range="{{onlyArray}}"
+    >
+    <view class="dyh">
+      <label class="dyhname">
+        选择单元号: {{unitNo}}
+      </label>
+      
+    </view>
+</picker>
+
+    </view>
+  <view class="vote">
+    <view class="votedetail">
+      <label class="vote-title">{{vote.title}}</label>
+    <label class="vote-content">{{vote.content}}</label>
+    </view>
+    <view class="vote-btn">
+      <view  data-gId='{{true}}' bindtap="isAgree" class="btn-row">
+        <label class="btn">赞成</label>
+        <image class="btnimg" src="../../../images/zan.png"></image>
+        <label class="coment-text">{{vote.agreecount}}</label>
+      </view>
+      <view  data-gId='{{false}}' bindtap="isAgree" class="btn-row">
+        <label class="btn">反对</label>
+        <image class="btnimg" src="../../../images/cai.png"></image>
+        <label class="coment-text">{{vote.disagreecount}}</label>
+      </view>
+    </view>
+  </view>
+ 
+  <view class="tab">
+     <view class="item"  wx:for="{{votelist}}">
+       <text class="name">{{item.unitNo}}</text> 
+       <text class="comment">{{item.isAgree ? '同意':'反对'}}</text> 
+      </view>
+
+  </view>
+
+</scroll-view>
+
+</view>

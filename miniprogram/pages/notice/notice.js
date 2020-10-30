@@ -1,14 +1,11 @@
-// miniprogram/pages/lostandfond/lostList.js
-var app = getApp()
+// miniprogram/pages/notice/notice.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-    lostList:[]
-
+    noticelist:[]
   },
 
   /**
@@ -21,20 +18,19 @@ Page({
 
     let that = this;
     wx.cloud.callFunction({
-      name:'lostAndfond',
+      name:'notice',
       data:{
         action:'queryAll',
       },
       success : res => {
         that.setData({
-          lostList:res.result.data
+          noticelist:res.result.data
         })
-        console.log(that.data.lostList);
+        console.log(that.data.noticelist);
       }
     })
 
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

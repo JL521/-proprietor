@@ -1,8 +1,16 @@
 <!--miniprogram/pages/home/publishvote/publishvote.wxml-->
 <view class="container">
 
-  <scroll-view>
-    发起投票
+  <scroll-view class="sc">
+    <view class="title">
+      <input bindinput="inputedit" data-name="title" value="{{title}}" placeholder="请输入投票标题"/>
+    </view>
+    <view class="content">
+      <textarea class="textcontent" bindinput="inputedit" data-name="content" value="{{content}}" placeholder="请输入投票的简述"/>
+    </view>
+    
   </scroll-view>
+  <button type="custom" class="pubbtn" bindtap="publish">发布</button>
+
 
 </view>

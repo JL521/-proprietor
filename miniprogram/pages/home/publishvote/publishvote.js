@@ -1,4 +1,5 @@
 // miniprogram/pages/home/publishvote/publishvote.js
+var app = getApp()
 Page({
 
   /**
@@ -6,6 +7,69 @@ Page({
    */
   data: {
 
+    title:'',
+    content:''
+
+  },
+
+  publish: function(){
+
+    let that = this;
+    if(that.data.title.length==0){
+      wx.showToast({
+        title: '请输入投票标题',
+        icon:'none'
+      })
+      return;
+    }
+    if(that.data.content.length==0){
+      wx.showToast({
+        title: '请输入投票简述',
+        icon:'none'
+      })
+      return;
+    }
+    var timestamp = Date.parse(new Date());
+    var date = new Date(timestamp);
+    //获取年份  
+    var Y =date.getFullYear();
+    //获取月份  
+    var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+    //获取当日日期 
+    var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate(); 
+    let datestr = Y + '-'  + M+ '-' + D;
+
+    wx.showLoading();
+    wx.cloud.callFunction({
+      name:'vote',
+      data:{
+        action:'publish',
+        title:that.data.title,
+        content:that.data.content,
+        uid:app.globalData.openid,
+        type:0,
+        time:datestr
+      },
+      success: res => {
+        wx.hideLoading()
+        wx.navigateBack({
+          delta: 0,
+        })
+      }
+    })
+
+  },
+
+  inputedit: function(e){
+
+    let that = this;
+    let dataset = e.currentTarget.dataset;
+    let value = e.detail.value;
+    let key = dataset.name;
+    that.data[key] = value;
+    that.setData({
+      key:that.data[key]
+    })
   },
 
   /**

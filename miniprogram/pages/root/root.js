@@ -15,6 +15,17 @@ Page({
     this.querybanner();
   },
 
+  notice: function(){
+    wx.navigateTo({
+      url: '../notice/notice',
+    })
+    wx.requestSubscribeMessage({
+      tmplIds: ['x9bHH5SLsnTzDbpi2vAFJQTq76bntrVqEUqVZjZE7rQ'],
+      success(res){
+      }
+    })
+  },
+
   querybanner: function(){
     let that = this;
     wx.cloud.callFunction({
